@@ -5,7 +5,7 @@ import java.util.Arrays;
 public class MultiThreading  implements Runnable{
 
 	Thread multithread;
-	String[] name = { "It is recommended to use Calender class"};
+	String[] name = { "It", "is", "recommended", "to", "use", "Calendar", "class"};
 
 	MultiThreading() {
 		multithread = new Thread(this, "My runnable thread");
