@@ -4,25 +4,19 @@ import java.util.Date;
 
 public class MultiThreads extends Thread {
 	
-	Date date = java.util.Calendar.getInstance().getTime();
+	public static void main(String[] args) {
+		// create objects of thread
+		Thread statementPrinter1 = new Statementprinter();
+		Thread statementPrinter2 = new Statementprinter();
+		
+		//create objects of thread with name
+		Thread printerThread1 = new Thread(statementPrinter1, "printThread");
+		Thread printerThread2 = new Thread(statementPrinter2);
+		
+		//Execute thread
+		printerThread2.start();
+		printerThread1.start();
 
-	MultiThreads()
-	   {
-	     System.out.println("My thread created " + date);
-	     start();
-	   }
-
-	public void run() {
-				
-		try {
-			for (int i = 0; i <= 10; i++) {
-				System.out.println(date + " " + getClass().getName() + " " + i);
-				Thread.sleep(1000);
-			}
-		} catch (InterruptedException e) {
-			System.out.println("my thread interrupted");
-		}
-		System.out.println("My thread run is over");
 	}
 
 }
