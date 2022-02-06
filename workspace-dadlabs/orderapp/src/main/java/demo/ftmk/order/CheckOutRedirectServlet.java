@@ -38,7 +38,7 @@ public class CheckOutRedirectServlet extends HttpServlet {
 		HttpSession session = request.getSession();
 		List<OrderedProduct> orderedProducts = (List<OrderedProduct>) session.getAttribute("orderedProducts");
 		
-		// Forward servlet to zeroOrder.html if orderedProducts does not exist
+		//Forward servlet to zeroOrder.html if orderedProducts does not exist
 		RequestDispatcher dispatcher;
 		if( orderedProducts== null) {
 			System.out.println("No order");
@@ -47,11 +47,11 @@ public class CheckOutRedirectServlet extends HttpServlet {
 			
 		}
 		else {
-			//calculate total quantity and total order
-			//Invoke the appropriate method from orderDataManager
+			
 			OrderDataManager orderDataManager = new OrderDataManager();
 			Order order = orderDataManager.processOrder(orderedProducts);
-			
+			//calculate total quantity and total order
+			//Invoke the appropriate method from orderDataManager
 			//Display details of order
 			PrintWriter writer = response.getWriter();
 			writer.println("<html>"); 

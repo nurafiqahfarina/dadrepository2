@@ -51,7 +51,6 @@ public class OrderRedirectServlet extends HttpServlet {
 		Product product = new Product();
 		
 		
-		
 		//Validate list - instantiate new list if it is null
 		boolean flag = orderedProducts.isEmpty();
 		
@@ -69,50 +68,41 @@ public class OrderRedirectServlet extends HttpServlet {
 		{
 				case 101:
 					product.setName("McChicken Value Meal");
-					product.setPrice(13.20);
-					
+					product.setPrice(13.20);				
 					ordering.setOrderedProduct(product);
 					ordering.setQuantity(quantity);
-					//orderedProducts.add(ordering);
 					break;
 				
 				case 102:
 					product.setName("Smoky Grilled Beef Meal");
 					product.setPrice(17.90);
-					
 					ordering.setOrderedProduct(product);
 					ordering.setQuantity(quantity);
-					//orderedProducts.add(ordering);
 					break;
 			
 				case 103:
 					product.setName("Ayam Goreng McD Spicy Meal 2pcs");
-					product.setPrice(16.95);
-					
+					product.setPrice(16.95);				
 					ordering.setOrderedProduct(product);
 					ordering.setQuantity(quantity);
-					//orderedProducts.add(ordering);
 					break;
 					
 				case 104:
 					product.setName("Spicy McChicken Deluxe Meal");
 					product.setPrice(16.65);
-					
 					ordering.setOrderedProduct(product);
-					ordering.setQuantity(quantity);
-					//orderedProducts.add(ordering);	
+					ordering.setQuantity(quantity);	
 					break;
 				
 				case 105:
 					product.setName("Chicken McNuggets 6pcs Meal");
-					product.setPrice(13.20);
-					
+					product.setPrice(13.20);					
 					ordering.setOrderedProduct(product);
 					ordering.setQuantity(quantity);
-					//orderedProducts.add(ordering);
 					break;
 			
 			}
+			
 		OrderDataManager orderDataMgr = new OrderDataManager();
 		 
 	
